@@ -1,0 +1,269 @@
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pure Black Background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    background: #000000;
+}
+
+/* Registration Card: Dark Red */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #B00020;
+    padding: 25px 30px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+
+    box-shadow: 0 0 25px rgba(176, 0, 32, 0.45);
+}
+
+/* Title */
+.container .title {
+    font-size: 25px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+    color: #ffffff;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 35px;
+    border-radius: 5px;
+    background: #000000;
+}
+
+/* User Details */
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px;
+    gap: 0 20px;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(50% - 10px);
+}
+
+/* Labels */
+form .input-box span.details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Input Fields */
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    padding-left: 15px;
+
+    background: #000000;
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+    border-bottom-width: 2px;
+
+    transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.user-details .input-box input::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+/* Input Focus */
+.user-details .input-box input:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 8px #000000;
+}
+
+/* Gender Section */
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+form .category {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 14px 0;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Gender Radio Dots */
+form .category label .dot {
+    height: 18px;
+    width: 18px;
+    min-width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+    background: #000000;
+    border: 2px solid #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+/* Selected Gender */
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+    background: #ffffff;
+    border-color: #000000;
+    box-shadow: 0 0 5px #000000;
+}
+
+/* Hide Radio Inputs */
+form input[type="radio"] {
+    display: none;
+}
+
+/* Submit Button */
+form .button {
+    height: 45px;
+    margin: 30px 0 5px;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+
+    color: #ffffff;
+    background: #000000;
+
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+form .button input:hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+/* Message */
+.message {
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 18px;
+    color: #ffffff;
+}
+
+.message.success {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        padding: 25px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 584px) {
+    body {
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 22px 18px;
+    }
+
+    form .user-details .input-box {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .content form .user-details {
+        margin-top: 20px;
+        gap: 0;
+    }
+
+    form .category {
+        justify-content: flex-start;
+        gap: 15px 22px;
+    }
+
+    form .gender-details .gender-title {
+        font-size: 18px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px 14px;
+    }
+
+    .container .title {
+        font-size: 23px;
+    }
+
+    form .category {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-details .input-box input {
+        height: 44px;
+        font-size: 14px;
+    }
+
+    form .button input {
+        font-size: 16px;
+    }
+}
